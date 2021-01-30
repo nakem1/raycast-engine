@@ -1,0 +1,152 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   structs_cub.h                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/08 04:28:45 by lmurray           #+#    #+#             */
+/*   Updated: 2021/01/30 22:45:15 by lmurray          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef STRUCTS_CUB_H
+# define STRUCTS_CUB_H
+/*
+typedef struct	s_camera
+{
+}				t_camera;
+*/
+typedef struct	s_image
+{
+	void		*pointer;
+	void		*content;
+	int			line_size;
+	int			btp;
+	int			width;
+	int			height;
+	int		    end;
+}				t_image;
+
+typedef struct	s_tex
+{
+	t_image		north;
+	t_image	    east;
+	t_image	    west;
+	t_image	    south;
+	t_image	    sprite;
+	int		    ceil;
+	int		    flor;
+	int			x_tex;
+	int			y_tex;
+	double		pos_tex;
+	double		step_tex;
+	double		x_wall;
+}				t_tex;
+
+typedef struct	s_field
+{
+	int			field_x;
+	int			field_y;
+	int		    max_x;
+	int		    max_y;
+//	int		    blk_x;
+//	int		    blk_y;
+//	int		    blk_z;
+	char	    **map;
+}				t_field;
+
+typedef struct	s_window
+{
+	int			side;
+	int			res_width;
+	int			res_height;
+	int			height_ln;
+	int			top_wall;
+	int			bottom_wall;
+	void		*mlx_ptr;
+	void		*win_ptr;
+}				t_window;
+
+/*
+** 		Description:		x_pos and y_pos represent the
+**							position vector of the player
+**
+**							dirX and dirY represent the
+**							direction of the player
+*/
+
+typedef struct s_player
+{
+	double		x_pos;
+	double		y_pos;
+	double		x_dir;
+	double		y_dir;
+	double		step_speed;
+	double		turn_speed;
+}				t_player;
+
+/*
+** 		Description:		x_plane and y_plane represent the camera 
+**							plane of the player.
+*/
+
+typedef struct	s_camera
+{
+	double x_camera;
+	double x_plane;
+	double y_plane;
+}				t_camera;
+
+/*
+typedef struct				s_sprite_ray
+{
+	struct s_sprite_ray		*prev;
+	struct s_sprite_ray		*next;
+	t_image					*texture;
+	double					len_sprite;
+	double					sprite_x;
+}							t_sprite_ray;
+*/
+
+typedef struct		s_ray
+{
+	int				x_ray_step;
+	int				y_ray_step;
+	double			x_sidedist;
+	double			y_sidedist;
+	double			x_deltadist;
+	double			y_deltadist;
+	double			dir_ray_x;
+	double			dir_ray_y;
+	double			wall_dist;
+}					t_ray;
+
+
+typedef struct	s_event
+{
+	int			right_turn;
+	int			left_turn;
+	int			escape;
+	int			w;
+	int			a;
+	int			s;
+	int			d;
+}				t_event;
+
+typedef struct	s_cub3d
+{
+	t_field		field;
+	t_camera	camera;
+	t_tex		texture;
+	t_window	window;
+	t_player	player;
+	t_ray		ray;
+	t_event		event;
+	t_image		*tmp_image1;
+	t_image		*tmp_image2;
+	int			fd;
+}				t_cub3d;
+
+
+#endif
