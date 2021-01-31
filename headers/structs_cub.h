@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 04:28:45 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/30 22:45:15 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/01/31 22:01:59 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,16 +98,20 @@ typedef struct	s_camera
 	double y_plane;
 }				t_camera;
 
-/*
-typedef struct				s_sprite_ray
+
+typedef struct				s_spr_location
 {
-	struct s_sprite_ray		*prev;
-	struct s_sprite_ray		*next;
-	t_image					*texture;
-	double					len_sprite;
-	double					sprite_x;
-}							t_sprite_ray;
-*/
+	double					spr_x;
+	double					spr_y;
+}							t_spr_location;
+
+typedef struct				s_sprite
+{
+	t_spr_location			*spr;
+	double					*zbuf;
+	int						*order;
+	double					*dist;
+}							t_sprite;
 
 typedef struct		s_ray
 {
@@ -143,6 +147,7 @@ typedef struct	s_cub3d
 	t_player	player;
 	t_ray		ray;
 	t_event		event;
+	t_sprite	sprite;
 	t_image		*tmp_image1;
 	t_image		*tmp_image2;
 	int			fd;

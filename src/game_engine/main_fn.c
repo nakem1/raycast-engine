@@ -6,12 +6,25 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 20:33:21 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/31 00:08:39 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/01/31 22:09:42 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../headers/cub3d.h"
 
+void			draw_sprite(t_cub3d *cub)
+{
+	cub->sprite.dist = (double *)malloc(sizeof(double) * 2);
+	cub->sprite.order = (int *)malloc(sizeof(int *) * 2);
+	cub->sprite.spr = (t_spr_location *)malloc(sizeof(t_spr_location) * 2);
+	cub->sprite.spr[0].spr_x = 16.5;
+	cub->sprite.spr[0].spr_y = 2.5;
+	cub->sprite.spr[1].spr_x = 19.5;
+	cub->sprite.spr[1].spr_y = 2.5;
+
+	sort_sprites(cub);
+
+}
 
 /*
 ** 		Function:			void		calculate()
@@ -40,6 +53,7 @@ void			calculate(t_cub3d *cub)
 		draw(cub, i);
 		i++;
 	}
+	draw_sprite(cub);
 }
 
 

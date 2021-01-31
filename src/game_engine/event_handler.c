@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 22:29:40 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/29 20:00:54 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/01/31 15:50:37 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ int				escape_event(t_cub3d *cub)
 
 void			event_handler(t_cub3d *cub)
 {
-	cub->player.step_speed = 0.15;
-	cub->player.turn_speed = 0.04;
+	cub->player.step_speed = 0.14;
+	cub->player.turn_speed = 0.08;
 	if (cub->event.left_turn)
 		step_turn_event(cub, e_turn_left);
 	if (cub->event.right_turn)

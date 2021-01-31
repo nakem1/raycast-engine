@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 03:19:12 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/31 01:16:15 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/01/31 21:40:01 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,7 @@ void    cub(char *conf)
 	if (!(cub->window.win_ptr = mlx_new_window(cub->window.mlx_ptr, \
 			cub->window.res_width, cub->window.res_height, "cub3d go!")))
 		stop_cub(cub, "MALLOC FAIL MAN");
+	// ! переделать
+	cub->sprite.zbuf = (double *)malloc(sizeof(double) * cub->window.res_width);
 	init_hook(cub);
 }

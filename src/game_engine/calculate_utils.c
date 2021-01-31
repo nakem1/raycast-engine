@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 17:06:18 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/31 00:23:50 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/01/31 21:41:29 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ void			draw_frame(t_cub3d *cub, int x)
 
 void			draw(t_cub3d *cub, int x)
 {
-
 	if (cub->window.side == 0)
 	{
 		cub->texture.x_wall = cub->player.y_pos + cub->ray.wall_dist * \
@@ -96,6 +95,7 @@ void			draw(t_cub3d *cub, int x)
 	if (cub->window.side == 1 && cub->ray.dir_ray_y < 0)
 		cub->texture.x_tex = cub->texture.north.width - cub->texture.x_tex - 1;
 	draw_frame(cub, x);
+	cub->sprite.zbuf[x] = cub->ray.wall_dist;	
 }
 
 /*

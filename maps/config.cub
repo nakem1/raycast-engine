@@ -1,9 +1,12 @@
 R 1920 1080
+
+
 NO ./etc/eagle.xpm
 WE ./etc/wood.xpm
 SO ./etc/greystone.xpm
 EA ./etc/colorstone.xpm
 S  ./etc/SPRITE.xpm
+
 C  135,206,235
 F  244,164,96
 
