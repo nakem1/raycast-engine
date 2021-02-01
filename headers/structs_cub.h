@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 04:28:45 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/31 22:01:59 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/01 03:54:47 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,14 +103,22 @@ typedef struct				s_spr_location
 {
 	double					spr_x;
 	double					spr_y;
+	double					dist;
 }							t_spr_location;
 
 typedef struct				s_sprite
 {
 	t_spr_location			*spr;
 	double					*zbuf;
-	int						*order;
-	double					*dist;
+	double					x_spr;
+	double					y_spr;
+	double					transpons_matrix_x;
+	double					transpons_matrix_y;
+	int						spr_scrx;
+	int						count_sprite;
+	int						height_spr;
+	int						top_spr;
+	int						bottom_spr;
 }							t_sprite;
 
 typedef struct		s_ray
