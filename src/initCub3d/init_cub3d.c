@@ -43,8 +43,21 @@ void		init_event(t_event *event)
 void		init_sprite(t_cub3d *cub)
 {
 	cub->sprite.zbuf = NULL;
-	cub->sprite.len_sprite = 0;
-	cub->sprite.sprite_x = 0;
+	cub->sprite.spr = NULL;	
+	cub->sprite.x_spr = 0;
+	cub->sprite.y_spr = 0;
+	cub->sprite.transpons_matrix_x = 0;
+	cub->sprite.transpons_matrix_y = 0;
+	cub->sprite.spr_scrx = 0;
+	cub->sprite.count_sprite = 0;
+	cub->sprite.height_spr = 0;
+	cub->sprite.top_spr_x = 0;
+	cub->sprite.bottom_spr_x = 0;
+	cub->sprite.top_spr_y = 0;
+	cub->sprite.bottom_spr_y = 0;
+	cub->sprite.w_spr = 0;
+	cub->sprite.rad_x = 0;
+	cub->sprite.rad_y = 0;
 }
 
 void		init_cub3d(t_cub3d *cub)
@@ -54,7 +67,7 @@ void		init_cub3d(t_cub3d *cub)
 	init_camera_field(&(cub->field), &(cub->camera));
 	init_window_ray(&(cub->window), &(cub->ray));
 	init_event(&(cub->event));
-	init_sprite(&(cub->sprite));
+	init_sprite(cub);
 	player_init(cub);
 	if (!(cub->window.mlx_ptr = mlx_init()))
 		stop_cub(cub, MLX_INIT_FAIL);

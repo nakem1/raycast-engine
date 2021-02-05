@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 22:07:03 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/01 03:59:15 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/05 13:58:07 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,22 @@
 void		calculate_limits_sprite(t_cub3d *cub)
 {
 	cub->sprite.height_spr = abs((int)(cub->window.res_height / \
-			cub->sprite.transpons_matrix_y));
-	cub->sprite.top_spr = (cub->sprite.height_spr * -1) / 2 + \
+			(cub->sprite.transpons_matrix_y)));
+	cub->sprite.top_spr_y = (cub->sprite.height_spr * -1) / 2 + \
 			cub->window.res_height / 2;
-	if (cub->sprite.top_spr < 0)
-		cub->sprite.top_spr = 0;
-	cub->sprite.bottom_spr = cub->sprite.height_spr / 2 + cub->window.res_height / 2;
-	if (cub->sprite.bottom_spr >= cub->window.res_height)
-		cub->sprite.bottom_spr = cub->window.res_height - 1;
+	if (cub->sprite.top_spr_y < 0)
+		cub->sprite.top_spr_y = 0;
+	cub->sprite.bottom_spr_y = cub->sprite.height_spr / 2 + cub->window.res_height / 2;
+	if (cub->sprite.bottom_spr_y >= cub->window.res_height)
+		cub->sprite.bottom_spr_y = cub->window.res_height - 1;
 }
 
-void		transpons_matrix(t_cub3d *cub)
+void		transpons_matrix(t_cub3d *cub, int i)
 {
 	double	inverse;
 
-	cub->sprite.x_spr = cub->sprite.spr[i].spr_x;
-	cub->sprite.y_spr = cub->sprite.spr[i].spr_y;
+	cub->sprite.x_spr = cub->sprite.spr[i].spr_x - cub->player.x_pos;
+	cub->sprite.y_spr = cub->sprite.spr[i].spr_y - cub->player.y_pos;
 	inverse = 1.0 / (cub->camera.x_plane * cub->player.y_dir - \
 			cub->player.x_dir * cub->camera.y_plane);
 	cub->sprite.transpons_matrix_x = inverse * (cub->player.y_dir * cub->sprite.x_spr - \
@@ -43,16 +43,17 @@ void		transpons_matrix(t_cub3d *cub)
 
 void		calculate_sprite(t_cub3d *cub)
 {
-      int spriteHeight = abs(int(h / (transformY))); //using 'transformY' instead of the real distance prevents fisheye
-      //calculate lowest and highest pixel to fill in current stripe
 	int		i;
 
 	i = 0;
 
 	while (i < cub->sprite.count_sprite)
 	{
-		transpons_matrix(cub);
+		transpons_matrix(cub, i);
 		calculate_limits_sprite(cub);
+		calculate_width_sprite(cub);
+		draw_sprite_vertical(cub);
+		i++;
 	} 
 }
 
@@ -74,7 +75,9 @@ void		ft_sort(t_cub3d *cub)
 				cub->sprite.spr[j] = cub->sprite.spr[j + 1]; // меняем местами
 				cub->sprite.spr[j + 1] = *tmp;
 			}
+			j++;
 		}
+		i++;
 	}
 }
 

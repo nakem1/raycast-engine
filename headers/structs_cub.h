@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 04:28:45 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/01 03:54:47 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/02 12:15:52 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,8 +117,13 @@ typedef struct				s_sprite
 	int						spr_scrx;
 	int						count_sprite;
 	int						height_spr;
-	int						top_spr;
-	int						bottom_spr;
+	int						top_spr_x;
+	int						bottom_spr_x;
+	int						top_spr_y;
+	int						bottom_spr_y;
+	int						w_spr;
+	int						rad_x;
+	int						rad_y;
 }							t_sprite;
 
 typedef struct		s_ray
