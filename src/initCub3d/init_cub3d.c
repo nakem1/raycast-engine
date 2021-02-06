@@ -14,8 +14,7 @@
 
 void		init_cub3d_etc(t_cub3d *cub)
 {
-//	cub->frame0 = NULL;
-//	cub->frame1 = NULL;
+	cub->tmp_image1 = NULL;
 	cub->fd = -1;
 }
 
@@ -44,6 +43,7 @@ void		init_sprite(t_cub3d *cub)
 {
 	cub->sprite.zbuf = NULL;
 	cub->sprite.spr = NULL;	
+	cub->sprite.list_spr = NULL;
 	cub->sprite.x_spr = 0;
 	cub->sprite.y_spr = 0;
 	cub->sprite.transpons_matrix_x = 0;

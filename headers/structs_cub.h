@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 04:28:45 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/02 12:15:52 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 22:09:16 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,7 @@ typedef struct				s_spr_location
 typedef struct				s_sprite
 {
 	t_spr_location			*spr;
+	t_list					*list_spr;
 	double					*zbuf;
 	double					x_spr;
 	double					y_spr;
@@ -162,7 +163,6 @@ typedef struct	s_cub3d
 	t_event		event;
 	t_sprite	sprite;
 	t_image		*tmp_image1;
-	t_image		*tmp_image2;
 	int			fd;
 }				t_cub3d;
 

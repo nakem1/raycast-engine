@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 20:38:38 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 02:30:30 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 17:56:07 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,6 @@
 # define ESCAPE_EVENT 53
 # define SKY 1
 # define FLOOR 2
-
-/*
-** 		defines are needed to simplify the draw_sky_floor()
-*/
-
-# define DRAW_END_SKY cub->window.top_wall
-# define DRAW_START_FLOOR cub->window.bottom_wall + 1
-# define DRAW_END_FLOOR cub->window.res_height
-# define COLOR_CEIL cub->texture.ceil
-# define COLOR_FLOOR cub->texture.flor
-# define DRAW_START(flag) ((flag) == (SKY) ? 0 : DRAW_START_FLOOR)
-# define DRAW_END(flag) ((flag) == (SKY) ? DRAW_END_SKY : DRAW_END_FLOOR)
-# define DRAW_COLOR(flag) ((flag) == (SKY) ? COLOR_CEIL : COLOR_FLOOR)
 
 enum			e_events
 {

@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 00:59:58 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/28 15:21:34 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 21:33:32 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ typedef struct	s_count_settings
 	int			floor;
 }				t_count_settings;
 
+void		ft_list_sprite_push_back(t_list **begin_list, double x, double y);
+t_list		*ft_create_spr(double x, double y);
 void		res_fd_check(char *conf, t_cub3d *cub);
 void		set_value_struct(t_cub3d *cub, char *str, \
 		t_count_settings *count_s, t_list **map_list);

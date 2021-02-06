@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 19:44:12 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/29 20:29:58 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 21:41:03 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,7 @@ void			calculate_wall(t_cub3d *cub)
 			cub->field.field_y += cub->ray.y_ray_step;
 			cub->window.side = 1;
 		}
-		if (cub->field.map[cub->field.field_y][cub->field.field_x] != '0')
+		if (cub->field.map[cub->field.field_y][cub->field.field_x] == '1')
 			is_wall = 1;
 	} 
 	calculate_distto_wall(cub);

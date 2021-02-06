@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 13:14:24 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/30 21:44:47 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 21:37:30 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char		**convert_list_toarr(t_list **map_list)
 	return (arr);
 }
 
-int			letters_inmap(char *str, int *max_x)
+int			letters_inmap(t_cub3d *cub, char *str, int *max_x, int y)
 {
 	int x;
 
@@ -44,6 +44,9 @@ int			letters_inmap(char *str, int *max_x)
 	{
 		if (!ft_strchr("201SEWN ", str[x]))
 			return (0);
+		if (str[x] == '2')
+			ft_list_sprite_push_back(&(cub->sprite.list_spr), \
+					(double)(x + 0.5), (double)(y + 0.5));
 		x++;
 	}
 	if (x > *max_x)
@@ -51,14 +54,14 @@ int			letters_inmap(char *str, int *max_x)
 	return (1);
 }
 
-int			map_letters_check(t_field *map)
+int			map_letters_check(t_cub3d *cub, t_field *map)
 {
 	int i;
 
 	i = 0;
 	while (map->map[i])
 	{
-		if (!letters_inmap(map->map[i], &(map->max_x)))
+		if (!letters_inmap(cub, map->map[i], &(map->max_x), i))
 			return (1);
 		i++;
 	}
@@ -80,7 +83,7 @@ void		field_validate(t_cub3d *cub)
 
 	plr_x = -1;
 	plr_y = -1;
-	if (map_letters_check(&(cub->field)))
+	if (map_letters_check(cub, &(cub->field)))
 		stop_cub(cub, MAP_LETTERS_FAIL);
 	else if (map_plr_check(cub, &(cub->field), &plr_x, &plr_y))
 		stop_cub(cub, MAP_PLR_FAIL);

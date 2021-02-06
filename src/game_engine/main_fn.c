@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 20:33:21 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 02:12:20 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 21:30:57 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,22 @@
 
 void			draw_sprite(t_cub3d *cub)
 {
-	cub->sprite.spr = (t_spr_location *)malloc(sizeof(t_spr_location) * 2);
-	cub->sprite.spr[0].spr_x = 3.5;
-	cub->sprite.spr[0].spr_y = 2.5;
-	cub->sprite.spr[1].spr_x = 5.5;
-	cub->sprite.spr[1].spr_y = 2.5;
-	cub->sprite.count_sprite = 2;
+	int				i;
+	t_spr_location	*tmp;
+	t_list			*tmp_list;
 
+	i = 0;
+	tmp_list = cub->sprite.list_spr;
+	cub->sprite.count_sprite = ft_list_size(cub->sprite.list_spr);
+	cub->sprite.spr = (t_spr_location *)malloc(sizeof(t_spr_location) * \
+			cub->sprite.count_sprite);
+	while (i < cub->sprite.count_sprite)
+	{
+		tmp = tmp_list->content;
+		cub->sprite.spr[i] = *tmp;
+		tmp_list = tmp_list->next;
+		i++;
+	}
 	sort_sprites(cub);
 	calculate_sprite(cub);
 }

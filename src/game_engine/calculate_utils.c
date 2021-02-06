@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 17:06:18 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/31 21:41:29 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 17:55:39 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,28 @@ void			draw_pix(t_cub3d *cub, int x, int y, unsigned int color)
 			+ x * (cub->tmp_image1->btp / 8));
 	*(unsigned int*)dest = color;
 }
-//!переделать
+
 void			draw_sky_floor(t_cub3d *cub, int x, int flag)
 {
 	int y;
 
-	y = DRAW_START(flag);
-	while (y < DRAW_END(flag))
+	if (flag == SKY)
 	{
-		draw_pix(cub, x, y, DRAW_COLOR(flag));
-		y++;
+		y = 0;
+		while (y < cub->window.top_wall)
+		{
+			draw_pix(cub, x, y, cub->texture.ceil);
+			y++;
+		}
+	}
+	else
+	{
+		y = cub->window.bottom_wall + 1;
+		while (y < cub->window.res_height)
+		{
+			draw_pix(cub, x, y, cub->texture.flor);
+			y++;
+		}
 	}
 }
 
