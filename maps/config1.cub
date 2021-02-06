@@ -1,10 +1,10 @@
-R 720 360
+R 1920 1080
 
 
-NO ./etc/NO.xpm
-WE ./etc/WE.xpm
-SO ./etc/SO.xpm
-EA ./etc/EA.xpm
+NO ./etc/eagle.xpm
+WE ./etc/greystone.xpm
+SO ./etc/redbrick.xpm
+EA ./etc/wood.xpm
 S  ./etc/SPRITE.xpm
 
 C  135,206,235

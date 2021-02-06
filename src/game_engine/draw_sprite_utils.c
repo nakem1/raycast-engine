@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 16:45:38 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/05 14:16:35 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 03:12:08 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ void		draw_spr(t_cub3d *cub, int x)
 			d = (y) * 256 - cub->window.res_height * 128 + cub->sprite.height_spr * 128;
 			cub->sprite.rad_y = ((d * cub->texture.sprite.height) / cub->sprite.height_spr) / 256;
 			color = get_pix_color(&(cub->texture.sprite), cub->sprite.rad_x, cub->sprite.rad_y);	
-			draw_pix(cub, x, y, color);
+			if (color != 0 && color != 16777215)
+				draw_pix(cub, x, y, color);
 			y++;
 		}
 	}			
@@ -60,4 +61,11 @@ void		draw_sprite_vertical(t_cub3d *cub)
 		draw_spr(cub, x);
 		x++;
 	}
+}
+
+void		spr_cpy(t_spr_location *src, t_spr_location *dest)
+{
+	dest->spr_x = src->spr_x;
+	dest->spr_y = src->spr_y;
+	dest->dist = src->dist;
 }

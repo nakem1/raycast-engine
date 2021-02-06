@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 20:38:38 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/02 11:24:56 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 02:30:30 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void			calculate_width_sprite(t_cub3d *cub);
 void			draw_sprite_vertical(t_cub3d *cub);
 void			sort_sprites(t_cub3d *cub);
 void			calculate_sprite(t_cub3d *cub);
+void			spr_cpy(t_spr_location *src, t_spr_location *dest);
 
 int				set_event_press(int event_code, t_cub3d *cub);
 int				set_event_release(int event_code, t_cub3d *cub);

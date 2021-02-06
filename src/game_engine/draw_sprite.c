@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 22:07:03 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/05 13:58:07 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 02:37:53 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,22 +63,24 @@ void		ft_sort(t_cub3d *cub)
 	int j;
 	t_spr_location *tmp;
 
+	tmp = (t_spr_location *)malloc(sizeof(t_spr_location));
 	i = 0;
 	while (i < cub->sprite.count_sprite)
 	{
 		j = 0;
-		while (j < cub->sprite.count_sprite)
+		while (j < cub->sprite.count_sprite - 1)
 		{
-			if (cub->sprite.spr[j].dist > cub->sprite.spr[j + 1].dist)
+			if (cub->sprite.spr[j].dist < cub->sprite.spr[j + 1].dist)
 			{
-				tmp = &(cub->sprite.spr[j]);
-				cub->sprite.spr[j] = cub->sprite.spr[j + 1]; // меняем местами
-				cub->sprite.spr[j + 1] = *tmp;
+				spr_cpy(&(cub->sprite.spr[j]), tmp);
+				spr_cpy(&(cub->sprite.spr[j + 1]), &(cub->sprite.spr[j]));
+				spr_cpy(tmp, &(cub->sprite.spr[j + 1]));
 			}
 			j++;
 		}
 		i++;
 	}
+	free(tmp);
 }
 
 void		sort_sprites(t_cub3d *cub)
