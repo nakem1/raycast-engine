@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 16:45:38 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 03:12:08 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 03:18:30 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void		draw_spr(t_cub3d *cub, int x)
 	int				y;
 	int				d;
 	unsigned int	color;
+
 
 	d = 0;
 	y = cub->sprite.top_spr_y;
