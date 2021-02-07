@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 16:28:33 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/25 21:47:21 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 23:55:42 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@
 # define MAP_PLR_FAIL "man cmn player error."
 # define MAP_BORDER_FAIL "map fail(((((((((((((("
 # define ESCAPE_EVENT_EXIT "escape"
+# define MALLOC_FAIL "MAAAAAN MALLOC error. Pls fix it"
 
 #endif

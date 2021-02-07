@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 03:19:12 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 17:52:21 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 23:56:07 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,12 @@ void    cub(char *conf)
 	t_cub3d *cub;
 
 	if (!(cub = (t_cub3d *)malloc(sizeof(t_cub3d))))
-		stop_cub(cub, "MALLOC fail(((((");
+		stop_cub(cub, MALLOC_FAIL);
 	init_cub3d(cub);
 	parse_conf(cub, conf);
 	if (!(cub->window.win_ptr = mlx_new_window(cub->window.mlx_ptr, \
-			cub->window.res_width, cub->window.res_height, "cub3d go!")))
-		stop_cub(cub, "MALLOC FAIL MAN");
+			cub->window.res_width, cub->window.res_height, "success pls!")))
+		stop_cub(cub, MALLOC_FAIL);
 	cub->sprite.zbuf = (double *)malloc(sizeof(double) * cub->window.res_width);
 	init_hook(cub);
 }

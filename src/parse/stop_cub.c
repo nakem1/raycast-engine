@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 18:18:59 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/21 18:06:56 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/06 23:59:33 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,5 @@ void		stop_cub(t_cub3d *cub, char *fail)
 {
 	if (cub->fd > -1)
 		close(cub->fd);
-//	if (cub->field.map)
-//		free_map(&(cub->field.map));
-//	if (cub->frame0)
-//		free_image(cub->frame0, cub->window.mlx_ptr);
-//	if (cub->frame0)
-//		free_image(cub->frame0, cub->window.mlx_ptr);
-	free(cub);
 	ft_quit_message(fail);
 }

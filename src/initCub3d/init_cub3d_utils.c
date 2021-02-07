@@ -43,6 +43,11 @@ void		init_tex(t_tex *texture)
 	init_image(&(texture->sprite));
 	texture->ceil = 0;
 	texture->flor = 0;
+	texture->x_tex = -1;
+	texture->y_tex = -1;
+	texture->pos_tex = -1;
+	texture->step_tex = -1;
+	texture->x_wall = -1;
 }
 
 void		init_window_ray(t_window *window, t_ray *ray)

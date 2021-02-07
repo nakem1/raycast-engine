@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 20:33:21 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 21:30:57 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/07 00:07:38 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void			draw_sprite(t_cub3d *cub)
 		tmp_list = tmp_list->next;
 		i++;
 	}
+	ft_list_clear(&(tmp_list));
 	sort_sprites(cub);
 	calculate_sprite(cub);
 }
