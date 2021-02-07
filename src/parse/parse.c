@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 06:12:48 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 22:51:47 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/07 18:06:20 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,26 @@ void		init_count_settings(t_count_settings *count_s)
 	count_s->west = 0;
 }
 
+void		set_sprite_list_toarr(t_cub3d *cub)
+{
+	int				i;
+	t_spr_location	*tmp;
+	t_list			*tmp_list;
 
+	i = 0;
+	tmp_list = cub->sprite.list_spr;
+	cub->sprite.count_sprite = ft_list_size(cub->sprite.list_spr);
+	cub->sprite.spr = (t_spr_location *)malloc(sizeof(t_spr_location) * \
+			cub->sprite.count_sprite);
+	while (i < cub->sprite.count_sprite)
+	{
+		tmp = tmp_list->content;
+		cub->sprite.spr[i] = *tmp;
+		tmp_list = tmp_list->next;
+		i++;
+	}
+	ft_list_clear(&(tmp_list));
+}
 
 void		parse_conf(t_cub3d *cub, char *conf)
 {
@@ -100,4 +119,5 @@ void		parse_conf(t_cub3d *cub, char *conf)
 	set_value_struct(cub, str, &count_s, &map_list);
 	cub->field.map = convert_list_toarr(&map_list);
 	field_validate(cub);
+	set_sprite_list_toarr(cub);
 }

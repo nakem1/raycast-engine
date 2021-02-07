@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 09:43:33 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/27 13:20:25 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/07 17:46:01 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ void		cub(char *conf);
 void		parse_conf(t_cub3d *cub, char *conf);
 void		stop_cub(t_cub3d *cub, char *fail);
 void		ft_quit_message(char *fail);
+t_image		*init_frame(t_cub3d *cub);
 
 #endif

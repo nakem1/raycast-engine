@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 22:07:03 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/07 01:51:32 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/07 18:09:42 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void		calculate_sprite(t_cub3d *cub)
 	int		i;
 
 	i = 0;
-
+	sort_sprites(cub);
 	while (i < cub->sprite.count_sprite)
 	{
 		transpons_matrix(cub, i);

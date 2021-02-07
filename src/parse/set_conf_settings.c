@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 05:12:07 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/26 02:14:53 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/07 19:26:02 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,8 @@ void		set_value_res(t_cub3d *cub, char *str, \
 		str = NULL;
 		stop_cub(cub, RES_FAIL);
 	}
+	if (cub->window.res_height > 5000 || cub->window.res_width > 5000)
+		stop_cub(cub, RES_FAIL);
 }
 
 void		check_zero_norme(t_cub3d *cub, char *str, int i)

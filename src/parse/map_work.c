@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 13:14:24 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 21:37:30 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/07 17:13:26 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char		**convert_list_toarr(t_list **map_list)
 	arr[size] = NULL;
 	while (tmp != NULL)
 	{
-		arr[i] = ft_strdup((char *)tmp->content);
+		arr[i] = (char *)tmp->content;
 		tmp = tmp->next;
 		i++;
 	}

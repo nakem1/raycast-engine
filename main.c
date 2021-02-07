@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 03:19:12 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 23:56:07 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/07 21:16:50 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@ int     main(int argc, char **argv)
 	{
 		cub(argv[1]);
 	}
-/*
 	else if (argc == 3)
 	{
 		if (ft_strcmp(argv[2], "--save"))
 		{
-			screenShot(argv[1]);
+			screen_shot(argv[1]);
 		}
 		else
 		{
@@ -35,7 +34,6 @@ int     main(int argc, char **argv)
 	{
 		stop_cub(ARGUMENTS_FAIL);
 	}
-*/
 	return (0);
 }
 
@@ -60,5 +58,7 @@ void    cub(char *conf)
 			cub->window.res_width, cub->window.res_height, "success pls!")))
 		stop_cub(cub, MALLOC_FAIL);
 	cub->sprite.zbuf = (double *)malloc(sizeof(double) * cub->window.res_width);
+	if (!(cub->tmp_image1 = init_frame(cub)))
+		stop_cub(cub, "malloc fail (((((");
 	init_hook(cub);
 }

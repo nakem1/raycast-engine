@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 04:28:45 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 22:09:16 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/07 21:16:20 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,6 +165,30 @@ typedef struct	s_cub3d
 	t_image		*tmp_image1;
 	int			fd;
 }				t_cub3d;
+
+typedef struct	s_bmp_head
+{
+	char	b;
+	char	m;
+	int		size;
+	int		reserv;
+	int		offset;
+}				t_bmp_file_header;
+
+typedef struct	s_bmp_inf
+{
+	int		size;
+	int		w;
+	int		h;
+	short	planes;
+	short	bpp;
+	int		compress;
+	int		size_image;
+	int		x_ppm;
+	int		y_ppm;
+	int		colors;
+	int		colors_size;
+}				t_bmp_info;
 
 
 #endif

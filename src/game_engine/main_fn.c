@@ -6,34 +6,11 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 20:33:21 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/07 00:07:38 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/07 18:10:42 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../headers/cub3d.h"
-
-void			draw_sprite(t_cub3d *cub)
-{
-	int				i;
-	t_spr_location	*tmp;
-	t_list			*tmp_list;
-
-	i = 0;
-	tmp_list = cub->sprite.list_spr;
-	cub->sprite.count_sprite = ft_list_size(cub->sprite.list_spr);
-	cub->sprite.spr = (t_spr_location *)malloc(sizeof(t_spr_location) * \
-			cub->sprite.count_sprite);
-	while (i < cub->sprite.count_sprite)
-	{
-		tmp = tmp_list->content;
-		cub->sprite.spr[i] = *tmp;
-		tmp_list = tmp_list->next;
-		i++;
-	}
-	ft_list_clear(&(tmp_list));
-	sort_sprites(cub);
-	calculate_sprite(cub);
-}
 
 /*
 ** 		Function:			void		calculate()
@@ -62,7 +39,7 @@ void			calculate(t_cub3d *cub)
 		draw(cub, i);
 		i++;
 	}
-	draw_sprite(cub);
+	calculate_sprite(cub);
 }
 
 
@@ -112,12 +89,9 @@ t_image			*init_frame(t_cub3d *cub)
 
 int				main_fn(t_cub3d *cub)
 {
-	if (!(cub->tmp_image1 = init_frame(cub)))
-		stop_cub(cub, "malloc fail (((((");
 	event_handler(cub);
 	calculate(cub);
 	mlx_put_image_to_window(cub->window.mlx_ptr, cub->window.win_ptr, \
 			cub->tmp_image1->pointer, 0, 0);
-	mlx_destroy_image(cub->window.mlx_ptr, cub->tmp_image1->pointer);
 	return (0);
 }
