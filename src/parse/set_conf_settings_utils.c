@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 08:03:56 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 18:25:24 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:42:16 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ void		check_rgb(t_cub3d *cub, int rgb, char *str, int *i)
 	}
 }
 
-void		set_r_size(t_cub3d *cub, int w, int h)
+void		set_r_size(t_cub3d *cub)
 {
-	cub->window.res_height = h;
-	cub->window.res_width = w;
+	cub->window.res_height = 2048;
+	cub->window.res_width = 2560;
 }

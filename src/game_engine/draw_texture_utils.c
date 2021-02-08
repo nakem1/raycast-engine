@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 12:58:34 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/31 21:37:31 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:27:18 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void				draw_texture_vertical(t_cub3d *cub, t_image *tex, int x)
 	cub->texture.step_tex = 1.0 * tex->height / cub->window.height_ln;
 	cub->texture.pos_tex = (cub->window.top_wall - cub->window.res_height / 2 +\
 			cub->window.height_ln / 2) * cub->texture.step_tex;
-	y = cub->window.top_wall;	
+	y = cub->window.top_wall;
 	while (y < cub->window.bottom_wall)
 	{
 		cub->texture.y_tex = (int)(cub->texture.pos_tex) & (tex->height - 1);
@@ -36,11 +36,12 @@ void				draw_texture_vertical(t_cub3d *cub, t_image *tex, int x)
 /*
 ** 		Function:			unsigned int		get_pix_color()
 **
-** 		Arguments:			
+** 		Arguments:			tex where we take colors, x - coordinate in tex,
+** y - coordinate in tex
 **
-** 		return:				
+** 		return:				color in decimal rgb
 **
-** 		Description:		
+** 		Description:		fn take decimal format color rgb
 */
 
 unsigned int		get_pix_color(t_image *texture, int x, int y)

@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 05:12:07 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 18:16:20 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:53:50 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ t_image		*get_ptr(t_cub3d *cub, t_count_settings *count_s, int set)
 void		set_value_texture(t_cub3d *cub, char *str, \
 		t_count_settings *count_s, int set)
 {
-	int i;
-	t_image *set_conf;
+	int		i;
+	t_image	*set_conf;
 
 	i = 2;
 	ft_skip_spaces(str, &i);
@@ -71,15 +71,13 @@ void		set_value_res(t_cub3d *cub, char *str, \
 {
 	int i;
 	int count;
-	int w;
-	int h;
 
-	mlx_get_screen_size(cub->window.mlx_ptr, &w, &h);
 	i = 2;
 	count = 0;
 	count_s->res += 1;
 	ft_skip_spaces(str, &i);
-	if (!only_digits_ln(str) || (cub->window.res_width = ft_atoi(&(str[i]))) < 1)
+	if (!only_digits_ln(str) || \
+			(cub->window.res_width = ft_atoi(&(str[i]))) < 1)
 	{
 		free(str);
 		str = NULL;
@@ -93,8 +91,8 @@ void		set_value_res(t_cub3d *cub, char *str, \
 		str = NULL;
 		stop_cub(cub, RES_FAIL);
 	}
-	if (cub->window.res_width > w || cub->window.res_height > h)
-		set_r_size(cub, w, h);
+	if (cub->window.res_width > 2560 || cub->window.res_height > 2048)
+		set_r_size(cub);
 }
 
 void		check_zero_norme(t_cub3d *cub, char *str, int i)
@@ -120,10 +118,7 @@ void		set_value_color(t_cub3d *cub, char *str, \
 	i = 2;
 	ft_skip_spaces(str, &i);
 	if (!only_digits_comma(str))
-	{
-		free(str);
 		stop_cub(cub, RGB_FAIL);
-	}
 	color1 = ft_atoi(&str[i]);
 	check_rgb(cub, color1, str, &i);
 	ft_skip_spaces_comma(str, &i);
@@ -134,6 +129,6 @@ void		set_value_color(t_cub3d *cub, char *str, \
 	check_rgb(cub, color3, str, &i);
 	ft_skip_spaces(str, &i);
 	check_zero_norme(cub, str, i);
-	rgb = (color3 << 0) | (color2 << 8) | (color1 << 16);	
+	rgb = (color3 << 0) | (color2 << 8) | (color1 << 16);
 	set_color_struct(cub, count_s, set, rgb);
 }

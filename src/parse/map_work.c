@@ -6,12 +6,12 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 13:14:24 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/07 17:13:26 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:46:30 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../../headers/cub3d.h"
-#include	<stdio.h>
+#include "../../headers/cub3d.h"
+#include <stdio.h>
 
 char		**convert_list_toarr(t_list **map_list)
 {

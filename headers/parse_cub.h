@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 00:59:58 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 21:33:32 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 21:04:03 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,25 +37,29 @@ typedef struct	s_count_settings
 	int			floor;
 }				t_count_settings;
 
-void		ft_list_sprite_push_back(t_list **begin_list, double x, double y);
-t_list		*ft_create_spr(double x, double y);
-void		res_fd_check(char *conf, t_cub3d *cub);
-void		set_value_struct(t_cub3d *cub, char *str, \
+void			ft_list_sprite_push_back(t_list **begin_list, double x, \
+		double y);
+t_list			*ft_create_spr(double x, double y);
+void			res_fd_check(char *conf, t_cub3d *cub);
+void			set_value_struct(t_cub3d *cub, char *str, \
 		t_count_settings *count_s, t_list **map_list);
-void		check_fd_gnl(t_cub3d *cub, int log, char *str);
-int			check_count_settings(t_count_settings *count_s);
-void		set_value_texture(t_cub3d *cub, char *str, \
+void			check_fd_gnl(t_cub3d *cub, int log, char *str);
+int				check_count_settings(t_count_settings *count_s);
+void			set_value_texture(t_cub3d *cub, char *str, \
 		t_count_settings *count_s, int set);
-void		set_value_color(t_cub3d *cub, char *str, \
+void			set_value_color(t_cub3d *cub, char *str, \
 		t_count_settings *count_s, int set);
-void		set_color_struct(t_cub3d *cub, t_count_settings *count_s, int set, \
-		int rgb);
-void		set_value_res(t_cub3d *cub, char *str, t_count_settings *count_s);
-void		check_rgb(t_cub3d *cub, int rgb, char *str, int *i);
-char		**convert_list_toarr(t_list **map_list);
-int			map_plr_check(t_cub3d *cub, t_field *map, int *plr_x, int *plr_y);
-int			flood_fill(t_field *field, int x, int y);
-int			map_border_check(t_field *map, int *plr_x, int *plr_y);
-void		field_validate(t_cub3d *cub);
+void			set_color_struct(t_cub3d *cub, t_count_settings *count_s, \
+int set, int rgb);
+void			set_value_res(t_cub3d *cub, char *str, \
+		t_count_settings *count_s);
+void			check_rgb(t_cub3d *cub, int rgb, char *str, int *i);
+char			**convert_list_toarr(t_list **map_list);
+int				map_plr_check(t_cub3d *cub, t_field *map, int *plr_x, \
+		int *plr_y);
+int				flood_fill(t_field *field, int x, int y);
+int				map_border_check(t_field *map, int *plr_x, int *plr_y);
+void			field_validate(t_cub3d *cub);
+void			set_r_size(t_cub3d *cub);
 
 #endif

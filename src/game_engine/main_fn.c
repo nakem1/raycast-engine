@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 20:33:21 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 17:08:06 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:30:28 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 void			calculate(t_cub3d *cub)
 {
 	int i;
-	
+
 	i = 0;
 	while (i < cub->window.res_width)
 	{
@@ -45,11 +45,11 @@ void			calculate(t_cub3d *cub)
 /*
 ** 		Function:			void		init_frame()
 **
-** 		Arguments:			
+** 		Arguments:			main struct
 **
-** 		return:				
+** 		return:				image
 **
-** 		Description:		
+** 		Description:		fn initialize image
 */
 
 t_image			*init_frame(t_cub3d *cub)
@@ -58,8 +58,8 @@ t_image			*init_frame(t_cub3d *cub)
 
 	if (!(frame = (t_image *)malloc(sizeof(t_image))))
 		return (NULL);
-	if (!(frame->pointer = mlx_new_image(cub->window.mlx_ptr, cub->window.res_width \
-			,cub->window.res_height)))
+	if (!(frame->pointer = mlx_new_image(cub->window.mlx_ptr, \
+			cub->window.res_width, cub->window.res_height)))
 	{
 		free(frame);
 		return (NULL);
@@ -81,9 +81,9 @@ t_image			*init_frame(t_cub3d *cub)
 **
 ** 		Arguments:			main struct
 **
-** 		return:				
+** 		return:				always return 0, dont ask why. MLX hello
 **
-** 		Description:		
+** 		Description:		main fn where we calculate and draw every frame
 */
 
 int				main_fn(t_cub3d *cub)

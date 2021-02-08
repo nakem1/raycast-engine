@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 06:12:48 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/07 18:06:20 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:48:02 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void		settings_selector(t_cub3d *cub, char *str, int *flag, \
 void		set_value_struct(t_cub3d *cub, char *str, \
 		t_count_settings *count_s, t_list **map_list)
 {
-	static int flag;
+	static int	flag;
 	int			i;
 
 	i = 1;
@@ -51,7 +51,7 @@ void		set_value_struct(t_cub3d *cub, char *str, \
 			if (*str)
 				settings_selector(cub, str, &flag, count_s);
 			else
-				break;
+				break ;
 		}
 		if (flag == 1)
 		{

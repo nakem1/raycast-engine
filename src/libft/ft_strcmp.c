@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 17:25:37 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 17:26:50 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:37:03 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 **
 ** Description:		ft_strcmp() functions lexicographically compare the
 ** null-ter-minated strings s1 and s2.
-**
 */
 
 int		ft_strcmp(const char *str1, const char *str2)

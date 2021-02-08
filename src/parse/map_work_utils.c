@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 20:25:41 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/31 15:22:30 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:51:42 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,18 +50,18 @@ void		set_dir_player(t_cub3d *cub, int i, int j)
 		set_dir_player_utils(cub, i, j);
 }
 
-int 		map_plr_check(t_cub3d *cub, t_field *map, int *plr_x, int *plr_y)
+int			map_plr_check(t_cub3d *cub, t_field *map, int *plr_x, int *plr_y)
 {
 	int i;
 	int j;
 	int count;
 
 	count = 0;
-	i = 0;
-	while (map->map[i])
+	i = -1;
+	while (map->map[++i])
 	{
-		j = 0;
-		while (map->map[i][j])
+		j = -1;
+		while (map->map[i][++j])
 		{
 			if (ft_strchr("WNSE", map->map[i][j]))
 			{
@@ -72,16 +72,14 @@ int 		map_plr_check(t_cub3d *cub, t_field *map, int *plr_x, int *plr_y)
 				*plr_x = j;
 				set_dir_player(cub, i, j);
 			}
-			j++;
 		}
-		i++;
 	}
 	if (count == 0)
 		return (1);
 	return (0);
 }
 
-int		flood_fill(t_field *field, int x, int y)	
+int			flood_fill(t_field *field, int x, int y)
 {
 	if (field->map[y][x] == '1' || field->map[y][x] < 0)
 		return (1);

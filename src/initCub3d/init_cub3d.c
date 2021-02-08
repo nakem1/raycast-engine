@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_cub3d.c                                        :+:      :+:    :+:   */
+/*   init_cub3d.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 04:45:03 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/13 04:51:21 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:34:44 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void		init_event(t_event *event)
 void		init_sprite(t_cub3d *cub)
 {
 	cub->sprite.zbuf = NULL;
-	cub->sprite.spr = NULL;	
+	cub->sprite.spr = NULL;
 	cub->sprite.list_spr = NULL;
 	cub->sprite.x_spr = 0;
 	cub->sprite.y_spr = 0;

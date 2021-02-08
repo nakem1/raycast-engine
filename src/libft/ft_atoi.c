@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmurray <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 20:53:22 by lmurray           #+#    #+#             */
-/*   Updated: 2020/11/27 18:14:58 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:35:31 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 /*
 ** Function:		int ft_atoi

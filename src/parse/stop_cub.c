@@ -6,19 +6,12 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 18:18:59 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 23:59:33 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:38:09 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../headers/cub3d.h"
-/*
-void		free_image(t_image *frame, void *mlx)
-{
-	if (frame->pointer)
-		mlx_destroy_image(mlx, frame->pointer);
-	free(frame);
-}
-*/
+
 void		ft_quit_message(char *fail)
 {
 	if (!fail)

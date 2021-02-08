@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 22:54:52 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/31 15:47:37 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:32:40 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ void			step_forward(t_cub3d *cub)
 			cub->player.x_dir * cub->player.step_speed)] == '0')
 		cub->player.x_pos += cub->player.x_dir * cub->player.step_speed;
 	if (cub->field.map[(int)(cub->player.y_pos + cub->player.y_dir * \
-			cub->player.step_speed)] \
-			[(int)(cub->player.x_pos)] == '0')
+			cub->player.step_speed)][(int)(cub->player.x_pos)] == '0')
 		cub->player.y_pos += cub->player.y_dir * cub->player.step_speed;
 }
 
@@ -45,13 +44,12 @@ void			step_right(t_cub3d *cub)
 
 void			step_back(t_cub3d *cub)
 {
-	if (cub->field.map[(int)(cub->player.y_pos)] \
-			[(int)(cub->player.x_pos - cub->player.x_dir * \
-					cub->player.step_speed)] == '0')
+	if (cub->field.map[(int)(cub->player.y_pos)][(int)(cub->player.x_pos - \
+			cub->player.x_dir * cub->player.step_speed)] == '0')
 		cub->player.x_pos -= cub->player.x_dir * cub->player.step_speed;
 	if (cub->field.map[(int)(cub->player.y_pos - \
-			cub->player.x_dir * cub->player.step_speed)] \
-					[(int)(cub->player.x_pos)] == '0')
+			cub->player.x_dir * cub->player.step_speed)][\
+			(int)(cub->player.x_pos)] == '0')
 		cub->player.y_pos -= cub->player.y_dir * cub->player.step_speed;
 }
 
@@ -69,13 +67,13 @@ void			step_turn_event(t_cub3d *cub, int event)
 {
 	if (event == e_forward)
 		step_forward(cub);
- 	else if (event == e_left)
+	else if (event == e_left)
 		step_left(cub);
 	else if (event == e_right)
 		step_right(cub);
 	else if (event == e_back)
 		step_back(cub);
- 	else if (event == e_turn_left)
+	else if (event == e_turn_left)
 		turn_left(cub);
 	else if (event == e_turn_right)
 		turn_right(cub);

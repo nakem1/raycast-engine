@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 16:45:38 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 03:18:30 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:24:42 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,25 @@ void		draw_spr(t_cub3d *cub, int x)
 	int				d;
 	unsigned int	color;
 
-
 	d = 0;
 	y = cub->sprite.top_spr_y;
-	if (cub->sprite.transpons_matrix_y > 0 && x > 0 && x < cub->window.res_width \
-			&& cub->sprite.transpons_matrix_y < cub->sprite.zbuf[x])
+	if (cub->sprite.transpons_matrix_y > 0 && x > 0 && x < \
+			cub->window.res_width && cub->sprite.transpons_matrix_y < \
+			cub->sprite.zbuf[x])
 	{
-		while (y < cub->sprite.bottom_spr_y)	
+		while (y < cub->sprite.bottom_spr_y)
 		{
-			d = (y) * 256 - cub->window.res_height * 128 + cub->sprite.height_spr * 128;
-			cub->sprite.rad_y = ((d * cub->texture.sprite.height) / cub->sprite.height_spr) / 256;
-			color = get_pix_color(&(cub->texture.sprite), cub->sprite.rad_x, cub->sprite.rad_y);	
+			d = (y) * 256 - cub->window.res_height * 128 + \
+					cub->sprite.height_spr * 128;
+			cub->sprite.rad_y = ((d * cub->texture.sprite.height) / \
+					cub->sprite.height_spr) / 256;
+			color = get_pix_color(&(cub->texture.sprite), cub->sprite.rad_x, \
+					cub->sprite.rad_y);
 			if (color != 0 && color != 16777215)
 				draw_pix(cub, x, y, color);
 			y++;
 		}
-	}			
+	}
 }
 
 void		draw_sprite_vertical(t_cub3d *cub)

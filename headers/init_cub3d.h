@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_cub3d.h                                        :+:      :+:    :+:   */
+/*   init_cub3d.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/12 02:44:22 by lmurray           #+#    #+#             */
-/*   Updated: 2021/01/13 04:52:10 by lmurray          ###   ########.fr       */
+/*   Created: 2021/02/08 21:00:08 by lmurray           #+#    #+#             */
+/*   Updated: 2021/02/08 21:00:11 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,5 @@
 void		init_camera_field(t_field *field, t_camera *camera);
 void		init_tex(t_tex *texture);
 void		init_window_ray(t_window *window, t_ray *ray);
-//void		init_event(t_event *event);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 19:44:12 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 21:41:03 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:03:28 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void			calculate_ray_dir(t_cub3d *cub)
 	}
 }
 
-
 /*
 ** 		Function:			void		calculate_step()
 **
@@ -52,8 +51,8 @@ void			calculate_ray_dir(t_cub3d *cub)
 **
 ** 		return:				void
 **
-** 		Description:		calculate ray_step. If the ray direction 
-**		has a negative x-component, stepX is -1, if the ray direciton has a 
+** 		Description:		calculate ray_step. If the ray direction
+**		has a negative x-component, stepX is -1, if the ray direciton has a
 **		positive x-component it's +1. If the x-component is 0, it doesn't
 **		matter what value stepX has since it'll then be unused.
 */
@@ -85,7 +84,6 @@ void			calculate_step(t_cub3d *cub)
 				cub->player.y_pos) * cub->ray.y_deltadist;
 	}
 }
-
 
 /*
 ** 		Function:			void		calculate_wall()
@@ -120,7 +118,7 @@ void			calculate_wall(t_cub3d *cub)
 		}
 		if (cub->field.map[cub->field.field_y][cub->field.field_x] == '1')
 			is_wall = 1;
-	} 
+	}
 	calculate_distto_wall(cub);
 }
 
@@ -137,18 +135,17 @@ void			calculate_wall(t_cub3d *cub)
 
 void			calculate_distto_wall(t_cub3d *cub)
 {
-	if (cub->window.side == 0) 
+	if (cub->window.side == 0)
 	{
-		cub->ray.wall_dist = ((double)(cub->field.field_x) - cub->player.x_pos +
-				(1 - cub->ray.x_ray_step) / 2) / cub->ray.dir_ray_x;
+		cub->ray.wall_dist = ((double)(cub->field.field_x) - cub->player.x_pos \
+				+ (1 - cub->ray.x_ray_step) / 2) / cub->ray.dir_ray_x;
 	}
 	else
 	{
-		cub->ray.wall_dist = ((double)(cub->field.field_y) - cub->player.y_pos +
-				(1 - cub->ray.y_ray_step) / 2) / cub->ray.dir_ray_y;
+		cub->ray.wall_dist = ((double)(cub->field.field_y) - cub->player.y_pos \
+				+ (1 - cub->ray.y_ray_step) / 2) / cub->ray.dir_ray_y;
 	}
 }
-
 
 /*
 ** 		Function:			void		calculate_cam()
@@ -162,7 +159,7 @@ void			calculate_distto_wall(t_cub3d *cub)
 
 void			calculate_cam(t_cub3d *cub, int *i)
 {
-	cub->camera.x_camera = 2 * *i / (double)(cub->window.res_width) - 1; 
+	cub->camera.x_camera = 2 * *i / (double)(cub->window.res_width) - 1;
 	cub->ray.dir_ray_x = cub->player.x_dir + cub->camera.x_plane * \
 			cub->camera.x_camera;
 	cub->ray.dir_ray_y = cub->player.y_dir + cub->camera.y_plane * \

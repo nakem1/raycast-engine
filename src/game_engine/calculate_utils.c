@@ -6,12 +6,11 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 17:06:18 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 17:55:39 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 22:08:28 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../headers/cub3d.h"
-
 
 /*
 ** 		Function:			void		draw_pix()
@@ -100,14 +99,14 @@ void			draw(t_cub3d *cub, int x)
 				cub->ray.dir_ray_x;
 	}
 	cub->texture.x_wall -= floor(cub->texture.x_wall);
-	cub->texture.x_tex = (int)(cub->texture.x_wall * (double) \
-			(cub->texture.north.width));
+	cub->texture.x_tex = (int)(cub->texture.x_wall * \
+			(double)(cub->texture.north.width));
 	if (cub->window.side == 0 && cub->ray.dir_ray_x > 0)
 		cub->texture.x_tex = cub->texture.north.width - cub->texture.x_tex - 1;
 	if (cub->window.side == 1 && cub->ray.dir_ray_y < 0)
 		cub->texture.x_tex = cub->texture.north.width - cub->texture.x_tex - 1;
 	draw_frame(cub, x);
-	cub->sprite.zbuf[x] = cub->ray.wall_dist;	
+	cub->sprite.zbuf[x] = cub->ray.wall_dist;
 }
 
 /*
