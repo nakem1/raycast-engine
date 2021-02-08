@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 20:33:21 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/07 18:10:42 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 17:08:06 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ void			calculate(t_cub3d *cub)
 	}
 	calculate_sprite(cub);
 }
-
 
 /*
 ** 		Function:			void		init_frame()
@@ -91,7 +90,10 @@ int				main_fn(t_cub3d *cub)
 {
 	event_handler(cub);
 	calculate(cub);
-	mlx_put_image_to_window(cub->window.mlx_ptr, cub->window.win_ptr, \
+	if (cub->save_flag == 1)
+		screen_shot(cub, cub->tmp_image1);
+	else
+		mlx_put_image_to_window(cub->window.mlx_ptr, cub->window.win_ptr, \
 			cub->tmp_image1->pointer, 0, 0);
 	return (0);
 }

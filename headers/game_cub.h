@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 20:38:38 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/06 17:56:07 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 17:08:20 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ unsigned int	get_pix_color(t_image *texture, int x, int y);
 void			draw_pix(t_cub3d *cub, int x, int y, unsigned int color);
 int				game_cub(t_cub3d *cub);
 int				main_fn(t_cub3d *cub);
+void			screen_shot(t_cub3d *cub, t_image *tmp);
 
 void			calculate_width_sprite(t_cub3d *cub);
 void			draw_sprite_vertical(t_cub3d *cub);

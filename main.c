@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 03:19:12 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/07 21:16:50 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 18:02:02 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,22 @@ int     main(int argc, char **argv)
 {
 	if (argc == 2)
 	{
-		cub(argv[1]);
+		cub(argv[1], 0);
 	}
 	else if (argc == 3)
 	{
-		if (ft_strcmp(argv[2], "--save"))
+		if (!ft_strcmp(argv[2], "--save"))
 		{
-			screen_shot(argv[1]);
+			cub(argv[1], 1);
 		}
 		else
 		{
-			stop_cub(ARGUMENTS_FAIL);
+			ft_quit_message(ARGUMENTS_FAIL);
 		}
 	}
 	else
 	{
-		stop_cub(ARGUMENTS_FAIL);
+		ft_quit_message(ARGUMENTS_FAIL);
 	}
 	return (0);
 }
@@ -46,12 +46,16 @@ void	init_hook(t_cub3d *cub)
 	mlx_loop(cub->window.mlx_ptr);
 }
 
-void    cub(char *conf)
+void    cub(char *conf, int flag)
 {
 	t_cub3d *cub;
 
 	if (!(cub = (t_cub3d *)malloc(sizeof(t_cub3d))))
 		stop_cub(cub, MALLOC_FAIL);
+	if (flag == 1)
+		cub->save_flag = 1;
+	else
+		cub->save_flag = 0;
 	init_cub3d(cub);
 	parse_conf(cub, conf);
 	if (!(cub->window.win_ptr = mlx_new_window(cub->window.mlx_ptr, \

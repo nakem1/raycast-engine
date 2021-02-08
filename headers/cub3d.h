@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 09:43:33 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/07 17:46:01 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/08 17:09:50 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 # include	<time.h>
 
 void		init_cub3d(t_cub3d *cub);
-void		cub(char *conf);
+void		cub(char *conf, int flag);
 void		parse_conf(t_cub3d *cub, char *conf);
 void		stop_cub(t_cub3d *cub, char *fail);
 void		ft_quit_message(char *fail);
