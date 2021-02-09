@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 09:43:33 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 20:59:48 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/09 02:55:47 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <math.h>
 # include "../minilibx/mlx.h"
-# include "../src/libft/libft.h"
+# include "../src/lib/libft.h"
 # include "structs_cub.h"
 # include "init_cub3d.h"
 # include "parse_cub.h"

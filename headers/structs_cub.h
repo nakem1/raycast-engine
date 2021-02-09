@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 04:28:45 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 21:44:54 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/09 21:43:04 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ typedef struct	s_player
 	double			x_dir;
 	double			y_dir;
 	double			step_speed;
-	double			turn_speed;
 }				t_player;
 
 /*

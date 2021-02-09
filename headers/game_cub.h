@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 20:38:38 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 17:08:20 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/09 22:14:26 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,11 @@ int				set_event_release(int event_code, t_cub3d *cub);
 int				set_event_escape(t_cub3d *cub);
 
 void			event_handler(t_cub3d *cub);
-void			step_turn_event(t_cub3d *cub, int event);
+void			step_turn_event(t_cub3d *cub, int event, double turn_speed_st, \
+		double turn_speed);
 int				escape_event(t_cub3d *cub);
-void			turn_left(t_cub3d *cub);
-void			turn_right(t_cub3d *cub);
+void			turn_left(t_cub3d *cub, double turn_speed);
+void			turn_right(t_cub3d *cub, double turn_speed);
 
 void			calculate_ray_dir(t_cub3d *cub);
 void			calculate_step(t_cub3d *cub);

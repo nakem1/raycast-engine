@@ -7,7 +7,7 @@ SRC_DIR = ./src
 DIR_PARSE = $(SRC_DIR)/parse
 DIR_GAME = $(SRC_DIR)/game_engine
 DIR_INIT = $(SRC_DIR)/initCub3d
-DIR_LIBFT = $(SRC_DIR)/libft
+DIR_LIBFT = $(SRC_DIR)/lib
 DIR_LIST = $(SRC_DIR)/lists
 SRC = main.c \
 	$(DIR_PARSE)/*.c \

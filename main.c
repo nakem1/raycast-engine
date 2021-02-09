@@ -6,14 +6,14 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 03:19:12 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 18:02:02 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/09 02:45:12 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "headers/cub3d.h"
 
-int     main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	if (argc == 2)
 	{
@@ -46,7 +46,7 @@ void	init_hook(t_cub3d *cub)
 	mlx_loop(cub->window.mlx_ptr);
 }
 
-void    cub(char *conf, int flag)
+void	cub(char *conf, int flag)
 {
 	t_cub3d *cub;
 

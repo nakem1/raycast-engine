@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 20:25:41 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 22:51:42 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/09 05:00:37 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ void		set_dir_player_utils(t_cub3d *cub, int i, int j)
 {
 	if (cub->field.map[i][j] == 'W')
 	{
-		cub->player.x_dir = -1.01;
-		cub->player.y_dir = 0.01;
+		cub->player.x_dir = -1;
+		cub->player.y_dir = 0;
 		cub->camera.x_plane = 0;
 		cub->camera.y_plane = 0.66;
 	}
 	else
 	{
-		cub->player.x_dir = 1.01;
-		cub->player.y_dir = 0.01;
+		cub->player.x_dir = 1;
+		cub->player.y_dir = 0;
 		cub->camera.x_plane = 0;
 		cub->camera.y_plane = -0.66;
 	}
@@ -34,15 +34,15 @@ void		set_dir_player(t_cub3d *cub, int i, int j)
 {
 	if (cub->field.map[i][j] == 'N')
 	{
-		cub->player.x_dir = 0.01;
-		cub->player.y_dir = -1.01;
+		cub->player.x_dir = 0;
+		cub->player.y_dir = -1;
 		cub->camera.x_plane = -0.66;
 		cub->camera.y_plane = 0;
 	}
 	else if (cub->field.map[i][j] == 'S')
 	{
-		cub->player.x_dir = 0.01;
-		cub->player.y_dir = 1.01;
+		cub->player.x_dir = 0;
+		cub->player.y_dir = 1;
 		cub->camera.x_plane = 0.66;
 		cub->camera.y_plane = 0;
 	}
