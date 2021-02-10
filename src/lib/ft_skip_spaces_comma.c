@@ -6,13 +6,13 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 08:14:06 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 22:36:00 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/10 03:41:47 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../headers/cub3d.h"
 
-int		ft_skip_spaces_comma(char *str, int *i)
+int		ft_skip_spaces_comma(t_cub3d *cub, char *str, int *i)
 {
 	ft_skip_spaces(str, i);
 	if (str[*i] == ',')
@@ -21,13 +21,10 @@ int		ft_skip_spaces_comma(char *str, int *i)
 		ft_skip_spaces(str, i);
 		if (str[*i] == ',')
 		{
-			return (1);
+			stop_cub(cub, RGB_FAIL);
 		}
 		return (0);
 	}
-	else
-	{
-		return (1);
-	}
+	stop_cub(cub, RGB_FAIL);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 20:25:41 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/09 05:00:37 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/10 05:06:59 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,8 @@ int			flood_fill(t_field *field, int x, int y)
 			|| x + 1 >= field->max_x)
 		return (0);
 	field->map[y][x] = -field->map[y][x];
-	return (flood_fill(field, x, y + 1) && flood_fill(field, x + 1, y) \
-			&& flood_fill(field, x, y - 1) && flood_fill(field, x - 1, y));
+	return (flood_fill(field, x - 1, y) && flood_fill(field, x + 1, y) \
+			&& flood_fill(field, x, y - 1) && flood_fill(field, x, y + 1));
 }
 
 int			map_border_check(t_field *map, int *plr_x, int *plr_y)

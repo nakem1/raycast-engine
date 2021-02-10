@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 05:12:07 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 22:53:50 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/10 03:44:30 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,10 +121,10 @@ void		set_value_color(t_cub3d *cub, char *str, \
 		stop_cub(cub, RGB_FAIL);
 	color1 = ft_atoi(&str[i]);
 	check_rgb(cub, color1, str, &i);
-	ft_skip_spaces_comma(str, &i);
+	ft_skip_spaces_comma(cub, str, &i);
 	color2 = ft_atoi(&str[i]);
 	check_rgb(cub, color2, str, &i);
-	ft_skip_spaces_comma(str, &i);
+	ft_skip_spaces_comma(cub, str, &i);
 	color3 = ft_atoi(&str[i]);
 	check_rgb(cub, color3, str, &i);
 	ft_skip_spaces(str, &i);

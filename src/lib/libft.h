@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 02:59:31 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 22:37:17 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/10 03:44:00 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,6 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), \
 	void (*del)(void *));
 
 void				ft_skip_spaces(char *str, int *i);
-int					ft_skip_spaces_comma(char *str, int *i);
 int					only_digits_ln(char *str);
 int					only_digits_comma(char *str);
 

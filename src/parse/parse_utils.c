@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 10:08:38 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 22:38:15 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/10 05:02:28 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 void		res_fd_check(char *conf, t_cub3d *cub)
 {
+	char ch;
+
 	if (((cub->fd = open(conf, O_RDONLY)) >= 0) && (ft_strlen(conf) > 4) \
-			&& (!(ft_strncmp(".cub", &conf[ft_strlen(conf) - 4], 4))))
+			&& (!(ft_strncmp(".cub", &conf[ft_strlen(conf) - 4], 4))) && \
+			read(cub->fd, &ch, 0) >= 0)
 	{
 		return ;
 	}

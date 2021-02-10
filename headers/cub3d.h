@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 09:43:33 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/09 02:55:47 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/10 03:43:53 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ void		parse_conf(t_cub3d *cub, char *conf);
 void		stop_cub(t_cub3d *cub, char *fail);
 void		ft_quit_message(char *fail);
 t_image		*init_frame(t_cub3d *cub);
+int			ft_skip_spaces_comma(t_cub3d *cub, char *str, int *i);
 
 #endif
