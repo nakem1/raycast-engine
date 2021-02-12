@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 20:33:21 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 22:30:28 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/12 05:58:18 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 **
 ** 		return:				void
 **
-** 		Description:		calculate functions
+** 		Description:		The raycasting loop is a for loop that goes through every x,
+** so there is a calculation for every  vertical stripe of the screen.
 */
 
 void			calculate(t_cub3d *cub)

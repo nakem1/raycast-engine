@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 19:44:12 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 22:03:28 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/12 05:54:27 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@
 **
 ** 		return:				void
 **
-** 		Description:		calculate deltadist for dda algorithm
+** 		Description:		deltaDistX and deltaDistY are the distance the ray
+** has to travel to go from 1 x-side to the next x-side, or from 1 y-side
+** to the next y-side.
 */
 
 void			calculate_ray_dir(t_cub3d *cub)
@@ -51,10 +53,9 @@ void			calculate_ray_dir(t_cub3d *cub)
 **
 ** 		return:				void
 **
-** 		Description:		calculate ray_step. If the ray direction
-**		has a negative x-component, stepX is -1, if the ray direciton has a
-**		positive x-component it's +1. If the x-component is 0, it doesn't
-**		matter what value stepX has since it'll then be unused.
+** 		Description:		sideDistX and sideDistY are initially the distance
+** the ray has to travel from its start position to the first x-side and
+** the first y-side.
 */
 
 void			calculate_step(t_cub3d *cub)
@@ -92,7 +93,7 @@ void			calculate_step(t_cub3d *cub)
 **
 ** 		return:				void
 **
-** 		Description:		 It's a loop that increments the ray with 1 square
+** 		Description:		 DDA algorithm. It's a loop that increments the ray with 1 square
 **		every time, until a wall is hit.
 */
 
@@ -129,8 +130,7 @@ void			calculate_wall(t_cub3d *cub)
 **
 ** 		return:				void
 **
-** 		Description:		calculate the distance of the ray to the wall,
-**		so that we can calculate how high the wall has to be drawn after this.
+** 		Description:		calculate the distance of the ray to the wall
 */
 
 void			calculate_distto_wall(t_cub3d *cub)
@@ -150,11 +150,14 @@ void			calculate_distto_wall(t_cub3d *cub)
 /*
 ** 		Function:			void		calculate_cam()
 **
-** 		Arguments:			main struct
+** 		Arguments:			main struct, variable counter(width)
 **
 ** 		return:				void
 **
-** 		Description:		calculate x_camera
+** 		Description:		cameraX is the x-coordinate on the camera plane
+** that the current x-coordinate of the screen represents, done this way
+** so that the right side of the screen will get coordinate 1, the center
+** of the screen gets coordinate 0, and the left side of the screen gets coordinate -1
 */
 
 void			calculate_cam(t_cub3d *cub, int *i)
