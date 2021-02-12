@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 05:12:07 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/10 03:44:30 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/12 03:31:15 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,21 +78,17 @@ void		set_value_res(t_cub3d *cub, char *str, \
 	ft_skip_spaces(str, &i);
 	if (!only_digits_ln(str) || \
 			(cub->window.res_width = ft_atoi(&(str[i]))) < 1)
-	{
-		free(str);
-		str = NULL;
 		stop_cub(cub, RES_FAIL);
-	}
 	i += ft_strlen_int(cub->window.res_width);
 	ft_skip_spaces(str, &i);
 	if (((cub->window.res_height = ft_atoi(&(str[i]))) < 1))
-	{
-		free(str);
-		str = NULL;
 		stop_cub(cub, RES_FAIL);
-	}
 	if (cub->window.res_width > 2560 || cub->window.res_height > 2048)
 		set_r_size(cub);
+	i += ft_strlen_int(cub->window.res_height);
+//	ft_skip_spaces(str, &i);
+	if (str[i] != '\0')
+		stop_cub(cub, RES_FAIL);
 }
 
 void		check_zero_norme(t_cub3d *cub, char *str, int i)
@@ -127,7 +123,7 @@ void		set_value_color(t_cub3d *cub, char *str, \
 	ft_skip_spaces_comma(cub, str, &i);
 	color3 = ft_atoi(&str[i]);
 	check_rgb(cub, color3, str, &i);
-	ft_skip_spaces(str, &i);
+//	ft_skip_spaces(str, &i);
 	check_zero_norme(cub, str, i);
 	rgb = (color3 << 0) | (color2 << 8) | (color1 << 16);
 	set_color_struct(cub, count_s, set, rgb);

@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 00:59:58 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/08 21:04:03 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/12 00:38:02 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ int				map_plr_check(t_cub3d *cub, t_field *map, int *plr_x, \
 		int *plr_y);
 int				flood_fill(t_field *field, int x, int y);
 int				map_border_check(t_field *map, int *plr_x, int *plr_y);
+int				check_zero_board(t_field *field);
 void			field_validate(t_cub3d *cub);
 void			set_r_size(t_cub3d *cub);
 

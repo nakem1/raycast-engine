@@ -1,4 +1,4 @@
-R 1080 720 100
+R 1080 720
 NO ./wolftex/greystone.xpm
 SO ./wolftex/redbrick.xpm
 EA ./wolftex/wood.xpm

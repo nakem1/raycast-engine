@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 20:25:41 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/10 05:06:59 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/12 00:38:51 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,8 @@ int			map_border_check(t_field *map, int *plr_x, int *plr_y)
 	int j;
 
 	if (!flood_fill(map, *plr_x, *plr_y))
+		return (0);
+	if (!check_zero_board(map))
 		return (0);
 	i = 0;
 	while (map->map[i])

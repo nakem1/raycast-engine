@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 04:45:03 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/09 22:03:04 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/12 03:21:27 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void		player_init(t_cub3d *cub)
 	cub->player.x_dir = -1;
 	cub->player.y_dir = 0;
 	cub->player.step_speed = 0;
-//	cub->player.turn_speed = 0;
 }
 
 void		init_event(t_event *event)

@@ -1,4 +1,4 @@
-Wed Feb 10 04:14:33 MSK 2021
+Fri Feb 12 02:55:50 MSK 2021
 
 
 =============== CUB3D DESTROYER - DAMAGE REPORT ===============
@@ -1394,6 +1394,8 @@ F 122,122,122
 
 
 PARSER OUTPUT:
+Error.
+map fail((((((((((((((
 
 
 =====================[DESTROYED STUFF #46]=====================
@@ -1423,6 +1425,8 @@ F 122,122,122
 
 
 PARSER OUTPUT:
+Error.
+map fail((((((((((((((
 
 
 =====================[DESTROYED STUFF #47]=====================
@@ -1452,6 +1456,8 @@ F 122,122,122
 
 
 PARSER OUTPUT:
+Error.
+map fail((((((((((((((
 
 
 =====================[DESTROYED STUFF #48]=====================
@@ -1481,6 +1487,8 @@ F 122,122,122
 
 
 PARSER OUTPUT:
+Error.
+map fail((((((((((((((
 
 
 =====================[DESTROYED STUFF #49]=====================
@@ -1897,6 +1905,8 @@ F 122,122,122
 
 
 PARSER OUTPUT:
+Error.
+map fail((((((((((((((
 
 
 =====================[DESTROYED STUFF #65]=====================
@@ -1926,6 +1936,8 @@ F 122,122,122
 
 
 PARSER OUTPUT:
+Error.
+map fail((((((((((((((
 
 
 =====================[DESTROYED STUFF #66]=====================
@@ -1955,6 +1967,8 @@ F 122,122,122
 
 
 PARSER OUTPUT:
+Error.
+map fail((((((((((((((
 
 
 =====================[DESTROYED STUFF #67]=====================
@@ -1984,6 +1998,8 @@ F 122,122,122
 
 
 PARSER OUTPUT:
+Error.
+map fail((((((((((((((
 
 
 =====================[DESTROYED STUFF #68]=====================
@@ -2133,6 +2149,8 @@ F 122,122,122
 
 
 PARSER OUTPUT:
+Error.
+auccchch hurt without extension. PLS ADD EXTENSION (＾▽＾)
 
 
 =====================[DESTROYED STUFF #73]=====================
@@ -2410,6 +2428,8 @@ F 122,122,122
 
 
 PARSER OUTPUT:
+Error.
+auccchch hurt without extension. PLS ADD EXTENSION (＾▽＾)
 
 
 =====================[DESTROYED STUFF #82]=====================
@@ -2445,7 +2465,7 @@ Bro you have duplicated or missed one setting (◕‿◕)
 
 =====================[DESTROYED STUFF #83]=====================
 ./invalid_maps/invalid_res_011.cub
-R 1080 720 100
+R 1080 720
 NO ./wolftex/greystone.xpm
 SO ./wolftex/redbrick.xpm
 EA ./wolftex/wood.xpm
@@ -2842,6 +2862,8 @@ F 122,122,122
 
 
 PARSER OUTPUT:
+Error.
+auccchch hurt without extension. PLS ADD EXTENSION (＾▽＾)
 
 
 =====================[DESTROYED STUFF #96]=====================
@@ -5830,174 +5852,3 @@ WE ./wolftex/greystone.xpm
 PARSER OUTPUT:
 Error.
 Bro you have duplicated or missed one setting (◕‿◕)
-
-
-=====================[DESTROYED STUFF #192]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "-save"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #193]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "save"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #194]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "--savea"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #195]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "--SAVE"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #196]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "---save"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #197]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "savea"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #198]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "-sav"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #199]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "--save s"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #200]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "-- save"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #201]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "--save --save"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #202]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "       "
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #203]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "--safe"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #204]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "--shave"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #205]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "--rafe"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #206]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "--1234"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #207]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "-+save"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #208]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "+-save"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #209]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "--sove"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
-
-
-=====================[DESTROYED STUFF #210]=====================
-
-../cub3D valid_maps/valid_tex_050.cub "--sav3"
-
-PARSER OUTPUT:
-Error.
-arguments fail(
