@@ -6,13 +6,13 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 03:19:12 by lmurray           #+#    #+#             */
-/*   Updated: 2021/02/12 03:22:40 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/02/12 03:32:57 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "headers/cub3d.h"
-
+// ! make переделать. Текстуры. Комментарии
 int		main(int argc, char **argv)
 {
 	if (argc == 2)
