@@ -1,33 +1,7 @@
-R                                                                1280 720
-
-NO              ./etc/eagle.xpm
-
-
-
-
-
-
-
-
-
-
-
-
-
+R  1280 720
+NO ./etc/eagle.xpm
 WE ./etc/wood.xpm
 SO ./etc/greystone.xpm
-
-
-
-
-
-
-
-
-
-
-
-
 EA ./etc/colorstone.xpm
 S  ./etc/SPRITE.xpm
 

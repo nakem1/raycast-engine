@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 #include "headers/cub3d.h"
-// ! make переделать. Текстуры. Комментарии
+
 int		main(int argc, char **argv)
 {
 	if (argc == 2)

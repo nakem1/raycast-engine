@@ -1,8 +1,0 @@
-R 1080 720
-NO ./wolftex/greystone.xpm
-SO ./wolftex/redbrick.xpm
-EA ./wolftex/wood.xpm
-WE ./wolftex/wood.xpm
-S ./wolftex/SPRITE.xpm
-C 255,200,160
-F 122,122,122

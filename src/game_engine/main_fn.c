@@ -43,16 +43,6 @@ void			calculate(t_cub3d *cub)
 	calculate_sprite(cub);
 }
 
-/*
-** 		Function:			void		init_frame()
-**
-** 		Arguments:			main struct
-**
-** 		return:				image
-**
-** 		Description:		fn initialize image
-*/
-
 t_image			*init_frame(t_cub3d *cub)
 {
 	t_image *frame;

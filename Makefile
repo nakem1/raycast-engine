@@ -21,11 +21,9 @@ OBJ = *.o
 
 MLX = ./minilibx/libmlx.a
 
-#	-----MANDATORY PART BUILD-----
-
 .PHONY: all
 all: $(NAME)
-	@echo CUB3D IS READY. SUCCESS PLS
+	@echo CUB3D IS READY.
 
 $(NAME):
 	$(COMPILE) $(SRC)
